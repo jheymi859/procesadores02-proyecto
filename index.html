@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bodega Doña Nelly</title>
+
+  <!-- ✅ ESTILOS DE ANIMACIÓN Y COLORES -->
+  <style>
+    body {
+      background-color: #BFCFAD;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .encabezado-animado {
+      font-size: 28px;
+      color: #2E8B57; /* Verde elegante */
+      font-weight: bold;
+      animation: moverTexto 4s infinite alternate;
+    }
+
+    @keyframes moverTexto {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(30px); }
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    fieldset {
+      margin-bottom: 20px;
+      background-color: #E8F5E9;
+      border-radius: 5px;
+      border: 1px solid #A5D6A7;
+    }
+
+    legend {
+      color: #2E7D32;
+      font-weight: bold;
+    }
+
+    label {
+      color: #2C3E50;
+    }
+
+    input, select, textarea {
+      width: 90%;
+      padding: 5px;
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+
+    h1, h2, h3 {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔴 ENCABEZADO -->
+  <table width="100%" height="200">
+    <tr>
+      <td width="40%">
+        <center>
+          <img src="media/abarrotes.jpg" alt="Logo de la Bodega" width="150">
+        </center>
+      </td>
+      <td>
+        <center>
+          <h3><div class="encabezado-animado">BODEGA DOÑA NELLY</div></h3>
+          <h2 style="color:#2C3E50;">“Tu bodega amiga, todos los días.”</h2>
+          <h3 style="color:#4E6E5D;">Jheymi Anita Paredes Sánchez</h3>
+        </center>
+      </td>
+    </tr>
+  </table>
+
+  <!-- 🟡 MENÚ DE NAVEGACIÓN -->
+  <table width="100%">
+    <tr bgcolor="#4E6E5D" height="40">
+      <td width="30%">
+        <center><span style="color: #F1F8E9; font-size: 20px;">Empresa</span></center>
+      </td>
+      <td width="40%">
+        <center><span style="color: #F1F8E9; font-size: 20px;">Abarrotes</span></center>
+      </td>
+      <td width="30%">
+        <center><span style="color: #F1F8E9; font-size: 20px;">Bebidas</span></center>
+      </td>
+    </tr>
+  </table>
+
+  <!-- 🟢 CONTENIDO PRINCIPAL -->
+  <table width="100%">
+    <tr height="400">
+      <!-- Marquee lateral -->
+      <td width="30%">
+        <marquee behavior="alternate">
+          <h1 style="color:#2E7D32;">SOMOS<br>TU MEJOR <br> OPCIÓN</h1>
+        </marquee>
+      </td>
+
+      <!-- Formulario y catálogo -->
+      <td width="70%">
+        <form>
+
+          <!-- DATOS DEL CLIENTE -->
+          <fieldset>
+            <legend>INGRESA TUS DATOS</legend>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Correo:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="pass">Contraseña:</label><br>
+            <input type="password" id="pass" name="pass"><br>
+
+            <label for="fecha">Fecha de Pedido:</label><br>
+            <input type="date" id="fecha" name="fecha"><br>
+          </fieldset>
+
+          <!-- CATÁLOGO DE PRODUCTOS -->
+          <fieldset>
+            <legend>Catálogo de Productos</legend>
+            <table border="1" width="100%" bgcolor="#ffffff">
+              <tr bgcolor="#AED581">
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+              </tr>
+              <tr>
+                <td>Arroz 1kg</td>
+                <td>Arroz extra calidad</td>
+                <td>S/ 4.50</td>
+              </tr>
+              <tr>
+                <td>Azúcar 1kg</td>
+                <td>Azúcar rubia</td>
+                <td>S/ 3.80</td>
+              </tr>
+              <tr>
+                <td>Leche Gloria</td>
+                <td>Lata 400g</td>
+                <td>S/ 5.20</td>
+              </tr>
+              <tr>
+                <td>Gaseosa Inca Kola</td>
+                <td>Botella 2.25L</td>
+                <td>S/ 8.50</td>
+              </tr>
+              <tr>
+                <td>chocolates</td>
+                <td>unidad y por caja</td>
+                <td>P/u s/1.50 - P/c S/12</td>
+              </tr>
+            </table>
+          </fieldset>
+
+          <!-- COMENTARIO -->
+          <fieldset>
+            <legend>Comentario</legend>
+            <textarea name="comentario" id="comentario" cols="40" rows="5" placeholder="Escribe aquí tu comentario..."></textarea>
+          </fieldset>
+
+          <!-- SERVICIOS -->
+          <fieldset>
+            <legend>Tipo de Producto</legend>
+            <input type="radio" id="repa" name="tipo" value="reparacion">
+            <label for="repa">Abarrotes</label><br>
+
+            <input type="radio" id="mante" name="tipo" value="mantenimiento">
+            <label for="mante">Bebidas y golosinas </label><br>
+
+            <input type="radio" id="redes" name="tipo" value="redes">
+            <label for="redes">Carnes</label>
+          </fieldset>
+
+          <!-- TIPO DE PAGO -->
+          <fieldset>
+            <legend>Elige tipo de pago</legend>
+            <select name="pago" id="pago">
+              <option value="contado">Contado</option>
+              <option value="credito">Crédito</option>
+            </select>
+          </fieldset>
+
+          <!-- SATISFACCIÓN -->
+          <fieldset>
+            <legend>Satisfacción por la atención</legend>
+            <input type="checkbox" id="bueno" name="satisfaccion" value="bueno">
+            <label for="bueno">Bueno</label><br>
+
+            <input type="checkbox" id="regular" name="satisfaccion" value="regular">
+            <label for="regular">Regular</label><br>
+
+            <input type="checkbox" id="malo" name="satisfaccion" value="malo">
+            <label for="malo">Malo</label>
+          </fieldset>
+
+        </form>
+
+        <!-- 🔵 VIDEO DE LA BODEGA -->
+        <center>
+          <h2 style="color:#2C3E50;">Conoce más sobre Bodega Nelly</h2>
+
+          <!-- CORRECTO: YouTube normal (no Shorts) -->
+          <iframe width="600" height="350"
+            src="https://www.youtube.com/embed/LRUu60R4UtU"
+            title="Video de Bodega Nelly"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </center>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
